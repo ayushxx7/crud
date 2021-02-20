@@ -20,6 +20,11 @@ app.use(express.json())
 const personRouter = require("./routes/persons.js");
 app.use("/persons", personRouter);
 
+//If end point does not exist, return 404
+app.use((req, res) => {
+  res.status("404").send("Page does not exist")
+})
+
 app.listen(9000, () => {
   console.log("Server Started");
 });

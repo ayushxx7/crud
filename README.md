@@ -56,7 +56,7 @@
   It is therefore added as a dev dependency.
   In `package.json` we've added a script with key name `start` to run `nodemon`.
 
-- On running the server we are getting a Deprecation warning, but according to this answer on StackOverFlow: https://stackoverflow.com/questions/66190532/deprecationwarning-listening-to-events-on-the-db-class-has-been-deprecated-and/66197527, it is safe to ignore the wwarning for now.
+- On running the server we are getting a Deprecation warning, but according to this [answer on StackOverFlow](https://stackoverflow.com/questions/66190532/deprecationwarning-listening-to-events-on-the-db-class-has-been-deprecated-and/66197527), it is safe to ignore the wwarning for now.
 
 ### [Mongoose Documentation](https://mongoosejs.com/docs/)
 
@@ -76,3 +76,17 @@ Controller => Routing
 | Tables   | Collections |
 | Rows     | Documents   |
 | Columns  | Fields      |
+
+### [HTTP Status Codes](https://httpstatuses.com/204)
+
+- 200: Status Ok
+- 201: Created (POST/PUT/PATCH)
+- 204: No Response required (DELETE)
+- 404: Not Found (When URL does not exist)
+- 500: Unknown Server Error
+
+- [Status Codes for CRUD](https://www.moesif.com/blog/technical/api-design/Which-HTTP-Status-Code-To-Use-For-Every-CRUD-App/)
+- [HTTP Status 204](https://benramsey.com/blog/2008/05/http-status-204-no-content-and-205-reset-content/)
+- On 204 response, the browser will not reload the current view
+
+##### [POSTMAN Collection](https://www.getpostman.com/collections/7c672290b8573ea16f4b)
