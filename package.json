@@ -1,0 +1,30 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "crud app for storing person details",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushxx7/crud.git"
+  },
+  "keywords": [
+    "crud"
+  ],
+  "author": "ayushxx7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayushxx7/crud/issues"
+  },
+  "homepage": "https://github.com/ayushxx7/crud#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
