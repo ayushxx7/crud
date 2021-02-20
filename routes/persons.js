@@ -29,14 +29,12 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  if(!req.body.name){
-    res.status("400").send("Name is required!")
-    return
+  if (!req.body.name) {
+    res.status("400").send("Name is required!");
   }
 
-  if(!req.body.dob){
-    res.status("400").send("Date of Birth is required!")
-    return
+  if (!req.body.dob) {
+    res.status("400").send("Date of Birth is required!");
   }
 
   const person = new Person({
@@ -52,7 +50,9 @@ router.post("/", async (req, res) => {
 
   try {
     const per = await person.save(); //create new document with POST data
-    res.status("201").json({"Person": per, "Quick Acess": `/persons/${per.id}`});
+    res
+      .status("201")
+      .json({ Person: per, "Quick Acess": `/persons/${per.id}` });
     console.log("Successful POST request");
   } catch (err) {
     console.error("Error", err);
@@ -86,7 +86,7 @@ router.delete("/:id", async (req, res) => {
     const person = await Person.findById(req.params.id);
     if (person) {
       const per = await person.remove(); //remove document from db
-      res.status("204").send()
+      res.status("204").send();
     } else {
       res.status("404").send(`ID "${req.params.id}" does not exist`);
     }

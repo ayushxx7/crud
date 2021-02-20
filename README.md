@@ -90,3 +90,7 @@ Controller => Routing
 - On 204 response, the browser will not reload the current view
 
 ##### [POSTMAN Collection](https://www.getpostman.com/collections/7c672290b8573ea16f4b)
+
+#### [Understanding Next](https://stackoverflow.com/questions/10695629/what-is-the-parameter-next-used-for-in-express)
+
+#### [Deploying Backend to Heroku](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)

@@ -25,6 +25,11 @@ app.use((req, res) => {
   res.status("404").send("Page does not exist")
 })
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 9000;
+}
+
 app.listen(9000, () => {
   console.log("Server Started");
 });
