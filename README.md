@@ -42,6 +42,7 @@
 
 - Node.js is an asynchronous JS runtime built on Chrome's V8 engine that can execute JS outside a browser.
 - We wil be using the Express framework on top of the Node JS Run Time
+- Express.js has an `app` object corresponding to HTTP. We define the routes by using the methods of this `app` object. It specifies a callback function, which is called when a request is received.
 
 #### React.js - Frontend
 
@@ -58,3 +59,20 @@
 - On running the server we are getting a Deprecation warning, but according to this answer on StackOverFlow: https://stackoverflow.com/questions/66190532/deprecationwarning-listening-to-events-on-the-db-class-has-been-deprecated-and/66197527, it is safe to ignore the wwarning for now.
 
 ### [Mongoose Documentation](https://mongoosejs.com/docs/)
+
+### [Routing in Node.js](https://www.geeksforgeeks.org/routing-in-node-js/)
+
+### MVC - Model View Controller
+
+View => UI/UX
+Model => Database
+Controller => Routing
+
+### Terminology - RDBMS vs MongoDB
+
+| RDBMS    | MONGODB     |
+| -------- | ----------- |
+| Database | Database    |
+| Tables   | Collections |
+| Rows     | Documents   |
+| Columns  | Fields      |
