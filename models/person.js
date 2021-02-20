@@ -1,47 +1,52 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 //schema for Person Database
 const personSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
 
   dob: {
     type: Date,
-    required: true
+    required: true,
   },
 
   address: {
     type: String,
-    required: false
+    required: false,
+    default: "Address",
   },
 
   profession: {
     type: String,
-    required: true
+    required: true,
+    default: "Engineer",
   },
 
   married: {
     type: Boolean,
     required: false,
-    default: false
+    default: false,
   },
 
   languages: {
     type: Array,
-    required: true
+    required: true,
+    default: ["English", "Hindi"],
   },
 
   image: {
     type: String,
-    required: false
+    required: false,
+    default: "https://picsum.photos/seed/picsum/200/300",
   },
 
   about: {
     type: String,
-    required: false
-  }
-})
+    required: false,
+    default: "About",
+  },
+});
 
-module.exports = mongoose.model('Person', personSchema)
+module.exports = mongoose.model("Person", personSchema);

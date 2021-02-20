@@ -14,6 +14,8 @@ conn.once("open", function () {
   console.log("Connected to Server!");
 });
 
+app.use(express.json())
+
 //different entities should live on different routes
 const personRouter = require("./routes/persons.js");
 app.use("/persons", personRouter);
