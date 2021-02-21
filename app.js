@@ -1,5 +1,6 @@
 const express = require("express"); //Express framework
 const mongoose = require("mongoose"); //MongoDB Connection
+const cors = require("cors");
 const url =
   process.env.MONGODB_URI ||
   "mongodb+srv://ayush:123@persons.frxud.mongodb.net/PersonDB?retryWrites=true&w=majority";
@@ -16,7 +17,8 @@ conn.once("open", function () {
   console.log("Connected to Server!");
 });
 
-app.use(express.json());
+app.use(express.json()); //to enable JSON request/response
+app.use(cors()); //to allow request from frontend
 
 //different entities should live on different routes
 const personRouter = require("./routes/persons.js");
