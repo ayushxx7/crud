@@ -1,6 +1,8 @@
 const express = require("express"); //Express framework
 const mongoose = require("mongoose"); //MongoDB Connection
-const url = "mongodb://localhost/PersonDB";
+const url =
+  process.env.MONGODB_URI ||
+  "mongodb+srv://ayush:123@persons.frxud.mongodb.net/PersonDB?retryWrites=true&w=majority";
 // Node.js will connect to MongoDB, and MongoDB will connect to PersonDB
 
 const app = express();
@@ -14,7 +16,7 @@ conn.once("open", function () {
   console.log("Connected to Server!");
 });
 
-app.use(express.json())
+app.use(express.json());
 
 //different entities should live on different routes
 const personRouter = require("./routes/persons.js");
@@ -22,14 +24,14 @@ app.use("/persons", personRouter);
 
 //If end point does not exist, return 404
 app.use((req, res) => {
-  res.status("404").send("Page does not exist")
-})
+  res.status("404").send("Page does not exist");
+});
 
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 9000;
 }
 
-app.listen(9000, () => {
+app.listen(port, () => {
   console.log("Server Started");
 });

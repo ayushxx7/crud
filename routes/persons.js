@@ -39,7 +39,7 @@ router.post("/", async (req, res) => {
 
   const person = new Person({
     name: req.body.name,
-    dob: req.body.dob,
+    dob: new Date(req.body.dob),
     address: req.body.address,
     profession: req.body.profession,
     married: req.body.married,
